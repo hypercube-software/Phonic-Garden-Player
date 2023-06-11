@@ -1,0 +1,199 @@
+/* https://flexbox.help/ */
+/* Main styles */
+:root {
+  --primary-color             : rgb(229, 229, 229);
+  --primary-background-color  : rgb(36, 36, 36);
+  --secondary-background-color: rgb(84, 84, 84);
+
+  --secondary-color: rgb(75, 75, 75);
+  --highlight-color: rgb(255, 104, 29);
+
+  --box-shadow-color               : rgb(201, 201, 201);
+  --disabled-button-color          : rgb(175, 175, 175);
+  --border-radius                  : 1rem;
+  --over-background-color          : var(--neomorphism-color1);
+  --secondary-over-background-color: rgb(40, 40, 40);
+
+  --neomorphism-baground-color: #15232b;
+  --neomorphism-color1        : #121E25;
+  --neomorphism-color2        : #182831;
+  --neomorphism-shadow-color1 : #111D23;
+  --neomorphism-shadow-color2 : #192933;
+  --neomorphism               : linear-gradient(145deg, var(--neomorphism-color1), var(--neomorphism-color2));
+  --neomorphism-shadow        : 9.91px 9.91px 15px var(--neomorphism-shadow-color1), -9.91px -9.91px 15px var(--neomorphism-shadow-color2);
+}
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width : 100%;
+}
+
+body {
+  padding         : 1em;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  font-size       : 12px;
+  font-family     : Arial, Helvetica, sans-serif;
+  font-weight     : 400;
+  color           : var(--primary-color);
+  background-color: var(--neomorphism-baground-color);
+  overflow        : hidden;
+}
+
+
+/* 
+https://neumorphic.design/
+*/
+.neomorphism {
+  background   : var(--neomorphism);
+  border-radius: 10px;
+  box-shadow   : var(--neomorphism-shadow);
+}
+
+.header {
+  display        : flex;
+  justify-content: right;
+
+  align-self   : stretch;
+  padding      : 0.5em;
+  margin-bottom: 1em;
+  text-align   : right;
+  font-family  : 'DS-Terminal', sans-serif;
+  font-size    : 2em;
+  font-weight  : 400;
+  font-style   : normal;
+}
+
+#view-buttons {
+  display: none;
+}
+
+#view-buttons>i {
+  padding-right: 1em;
+}
+
+.content {
+  height     : 85vh;
+  display    : flex;
+  flex-flow  : row;
+  align-items: center;
+  gap        : 2em;
+  position   : static;
+}
+
+@media (max-width: 500px) {
+  #mobile-content {
+    width   : 100vw;
+    overflow: hidden;
+  }
+
+  .header {
+    justify-content: space-between;
+    font-size      : 1em;
+  }
+  .audio-player {
+    padding-bottom: 2vh;
+  }
+
+  #view-buttons {
+    display: block;
+  }
+
+  .content {
+    justify-content: flex-start;
+    width          : 300vw;
+    position       : relative;
+    left           : 0vw;
+  }
+
+  .content>div {
+    width: 100vw;
+  }
+
+  .v1 {
+    left: 0vw;
+  }
+
+  .v2 {
+    left: -100vw;
+  }
+
+  .v3 {
+    left: -200vw;
+  }
+
+  .album>img {
+    max-width: 70vw;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff05;
+}
+
+* {
+  scrollbar-color: #ffffff05 #ffffff0d;
+  scrollbar-width: thin;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff0d
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#particles-js {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  z-index : -100;
+  width   : 100%;
+  height  : 100%;
+  opacity : 50%;
+}
+
+/* https://codepen.io/P1N2O/pen/pyBNzX */
+#gradient {
+  position       : absolute;
+  top            : 0;
+  left           : 0;
+  z-index        : -101;
+  width          : 100%;
+  height         : 100%;
+  background     : linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 100% 100%;
+  animation      : gradient 15s ease infinite;
+  filter         : brightness(40%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

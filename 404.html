@@ -1,0 +1,22 @@
+<html>
+<script>
+    const u = window.location.href;
+    const url = new URL(u);
+    if (url.pathname.includes(".mp3") || url.pathname.includes(".mp4")) {
+        console.error("404 not found");
+    }
+    else if (url.host.startsWith("localhost")) {
+        const idx = u.indexOf(url.pathname);
+        window.location.href = u.substring(0, idx) + "?play=" + u.substring(idx + 1);
+    }
+    else {
+		const baseurl = "@@BASEURL@@";
+        const idx = u.indexOf(baseurl);
+        window.location.href = u.substring(0, idx) + "@@BASEURL@@?play=" + u.substring(idx + baseurl.length+1);
+    }
+</script>
+
+<body>
+</body>
+
+</html>

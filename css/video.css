@@ -1,0 +1,26 @@
+#videoButton {
+    display         : none;
+}
+
+#videoButton.visible {
+    display         : block;
+}
+
+#video-container {
+    display   : none;
+    padding   : 2em;
+    /* make the video with its container and keep the aspect ratio*/
+    object-fit: contain;
+    width     : 100%;
+    height    : 100%;
+    max-height: 43vh;
+}
+
+#video-container.visible {
+    display         : block;
+}
+
+#video-player {
+    width: 100%;
+    height: 100%;
+}

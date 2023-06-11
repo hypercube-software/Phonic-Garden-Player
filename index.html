@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@@TITLE@@</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link href="https://fonts.cdnfonts.com/css/microextendflf" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ds-terminal" rel="stylesheet">
+  <link rel="stylesheet" href="css/albums.css" />
+  <link rel="stylesheet" href="css/player.css" />
+  <link rel="stylesheet" href="css/playlist.css" />
+  <link rel="stylesheet" href="css/track-info.css" />
+  <link rel="stylesheet" href="css/video.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div id="particles-js"></div>  
+  <div class="header neomorphism">
+    <div id="view-buttons">
+      <i id="album-view" class="fa-solid fa-compact-disc"></i>
+      <i id="player-view" class="fa-solid fa-headphones"></i>
+      <i id="tracks-view" class="fa-solid fa-list"></i>
+    </div>
+    <div>@@TITLE@@</div>
+  </div>
+  <div id="mobile-content">
+    <div class="content">
+      <div class="albums-container">
+        <ul class="albums">
+        </ul>
+      </div>
+      <div class="player-container neomorphism">
+        <div class="track-info-container">
+          <div id="trackTitle"></div>
+          <div id="video-container"></div>
+          <img id="picture" class="artwork visible" />
+          <div class="track-info-fields">
+          </div>
+        </div>
+        <div class="audio-player">
+          <div class="player-body">
+            <div id="waveform" class="waveform"></div>
+
+            <div class="controls">
+              <div>
+                <i id="prevButton" class="fa-solid fa-backward-step"></i>
+                <i id="playButton" class="fa-solid fa-play"></i>
+                <i id="nextButton" class="fa-solid fa-forward-step"></i>
+                <div class="volume">
+                  <i id="muteButton" class="volume-icon fa-solid fa-volume-up" alt="Volume"></i>
+                  <input id="volumeSlider" class="volume-slider" type="range" name="volume-slider" min="0" max="100"
+                    value="50" />
+                </div>
+                <i id="videoButton" class="fa-solid fa-video"></i>
+              </div>
+              <div class="timecode">
+                <span id="currentTime">00:00</span>
+                <span>/</span>
+                <span id="totalDuration">00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="playlist-container neomorphism">
+        <ul class="playlist fa-ul">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/wavesurfer.js@6.4.0/dist/wavesurfer.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="src/dom.js"></script>
+  <script src="src/gesture.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/player.js"></script>
+</body>
+
+</html>

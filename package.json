@@ -1,0 +1,26 @@
+{
+  "name": "pg-player",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple static site generator to play your albums and video clips. ",
+  "main": "build-peaks.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "serve -l 10092 ./dist",
+    "peaks": "node build-peaks.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://admin@joshua:8080/r/Web/AlbumsPlayer.git"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "buffer-crc32": "^0.2.13",
+    "eta": "^2.1.1",
+    "music-metadata": "^8.1.3"
+  }
+}

@@ -1,0 +1,52 @@
+#trackTitle {
+  font-family: 'MicroExtendFLF', sans-serif;
+  font-size  : 2em;
+  font-weight: 700;
+  padding    : 1em;
+  text-align : center;
+  white-space: pre;
+  color      : var(--highlight-color);
+}
+
+.track-info-container {
+  width         : 100%;
+  display       : flex;
+  align-items   : center;
+  flex-direction: column;
+}
+
+.track-info-fields {
+  display       : flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.track-info-field {
+  display       : flex;
+  flex-direction: row;
+}
+
+.track-info-field>label {
+  width      : 4rem;
+  display    : flex;
+  font-weight: bolder;
+}
+
+.track-info>div {
+  padding-bottom: 5px;
+}
+
+.artwork {
+  padding   : 2em;
+  display   : none;
+  /* make the img with its container and keep the aspect ratio*/
+  object-fit: contain;
+  width     : 100%;
+  height    : 100%;
+  max-height: 43vh;
+  cursor: pointer;
+}
+
+.artwork.visible {
+  display         : block;
+}

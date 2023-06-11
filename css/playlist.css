@@ -1,0 +1,41 @@
+.playlist-container {
+  padding  : 2em;
+  min-width: 25em;
+  height   : 100%;
+}
+
+.playlist {
+  margin-left    : 0px;
+  /* undo the margin from "fa-ul" */
+  overflow       : auto;
+  height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  justify-content: start;
+}
+
+/*
+each track in the list is made of 2 divs
+on on the left and one on the right
+this is done with "justify-content: space-between;"
+*/
+.playTrack {
+  display        : flex;
+  justify-content: space-between;
+
+  cursor             : pointer;
+  list-style         : none;
+  padding            : 15px 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+
+.playTrack.selected {
+  color      : var(--highlight-color);
+  font-weight: bold;
+}
+
+
+.playTrack:hover {
+  background-color: var(--over-background-color);
+}
